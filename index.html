@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-TicketMaster</title>
+    <!-- setup tailwind -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex flex-col min-h-screen container mx-auto" data-theme="light">
+    <main>
+         <!-- Navbar sticky top-0 z-50 -->
+     <nav class="bg-transparent p-4 ">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Logo -->
+            <div class="flex items-center gap-2">
+                <span class="text-3xl font-semibold text-[#1DD100]">E-TicketMaster</span>
+            </div>
+
+            <!-- Navigation Links -->
+            <div class="hidden md:flex gap-6">
+                <a href="#home" class="link link-hover text-lg">Home</a>
+                <a href="#about" class="link link-hover text-lg">About</a>
+                <a href="#destination" class="link link-hover text-lg">Destination</a>
+                <a href="#search" class="link link-hover text-lg">Search</a>
+            </div>
+
+            <!-- Actions -->
+            <div class="flex items-center gap-4">
+                <!-- Dark Mode Toggle -->
+                <button class="btn btn-circle btn-primary" id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="w-6 h-6 stroke-current">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m8.66-8.66H20M4 12H3m16.66-4.66l-.7.7m-12 12-.7.7M16.24 7.76l.7-.7m-12 12 .7-.7M12 8a4 4 0 100 8 4 4 0 000-8z"></path>
+                    </svg>
+                </button>
+                
+                <!-- Bus Icon and Text -->
+                <button  class="flex items-center gap-2 btn  btn-outline bg-[#e9fbe6] border-[#1DD100] text-[#1DD100] hover:bg-transparent hover:text-[#1DD100] hover:border-[#1DD100] ">
+                    <span class="text-lg font-medium">Bus</span>
+                    <img src="images/bus-icon.png" alt="">
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- banner -->
+     <section class="banner bg-no-repeat bg-center h-screen bg-cover bg-[url(images/banner.png)] flex items-center justify-center text-center rounded-2xl " >
+        <div>
+            <h2 class="text-8xl font-extrabold text-white tracking-wide"> End-To-End Travel With</h2>
+            <h4 class="text-8xl font-bold text-[#1DD100] py-4">GreenLine</h4>
+            <p class="text-white font-semibold pb-6">Enjoy competitive fares without compromising on quality.</p>
+            <button class="btn  btn-outline bg-[#e9fbe6] border-[#1DD100] text-[#1DD100] hover:bg-transparent hover:text-[#1DD100] hover:bg-white hover:border-[#1DD100]">Buy Tickets</button>
+        </div>
+     </section>
+     <!-- best offers for you -->
+      <section class="best-offer">
+
+      </section>
+      <!-- ph poribohon -->
+       <section>
+
+       </section>
+       <!-- select your seat -->
+        <section>
+
+        </section>
+    </main>
+
+    <script src="scripts/script.js"></script>
+    <script src="scripts/utility.js"></script>
+</body>
+</html>
