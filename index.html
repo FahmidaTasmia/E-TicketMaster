@@ -204,7 +204,181 @@
         </div>
 
         <!-- select your seat -->
-     
+        <div class="bg-gray-100 py-10 flex justify-center">
+          <div class="w-3/4 grid grid-cols-12 gap-4">
+            <!-- Left Section (Seat Selection) -->
+            <div class="col-span-7 bg-white rounded-lg shadow-md p-6">
+              <h3 class="text-xl font-bold pb-6">Select Your Seat</h3>
+              <!-- Seat Legend -->
+              <div class="flex items-center gap-6 pb-6">
+                <div class="flex items-center gap-2">
+                  <span class="w-5 h-5 bg-gray-100 border border-gray-300 rounded"></span>
+                  <p class="text-sm text-gray-500">Available</p>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="w-5 h-5 bg-green-500 rounded"></span>
+                  <p class="text-sm text-gray-500">Selected</p>
+                </div>
+              </div>
+              <!-- Seat Grid -->
+              <div class="space-y-4">
+                <!-- Row A -->
+                <div class="flex items-center gap-2">
+                  <p class="font-medium w-8 text-center">A</p>
+                  <button class="btn">A1</button>
+                  <button class="btn">A2</button>
+                  <div class="w-8"></div>
+                  <button class="btn">A3</button>
+                  <button class="btn">A4</button>
+                </div>
+                <!-- Row B -->
+                <div class="flex items-center gap-2">
+                  <p class="font-medium w-8 text-center">B</p>
+                  <button class="btn">B1</button>
+                  <button class="btn">B2</button>
+                  <div class="w-8"></div>
+                  <button class="btn">B3</button>
+                  <button class="btn">B4</button>
+                </div>
+                <!-- Row C -->
+                <div class="flex items-center gap-2">
+                  <p class="font-medium w-8 text-center">C</p>
+                  <button class="btn">C1</button>
+                  <button class="btn">C2</button>
+                  <div class="w-8"></div>
+                  <button class="btn">C3</button>
+                  <button class="btn">C4</button>
+                </div>
+                <!-- Repeat Rows D to J -->
+                <div class="flex items-center gap-2">
+                  <p class="font-medium w-8 text-center">D</p>
+                  <button class="btn">D1</button>
+                  <button class="btn">D2</button>
+                  <div class="w-8"></div>
+                  <button class="btn">D3</button>
+                  <button class="btn">D4</button>
+                </div>
+                <div class="flex items-center gap-2">
+                  <p class="font-medium w-8 text-center">E</p>
+                  <button class="btn">E1</button>
+                  <button class="btn">E2</button>
+                  <div class="w-8"></div>
+                  <button class="btn">E3</button>
+                  <button class="btn">E4</button>
+                </div>
+                <div class="flex items-center gap-2">
+                  <p class="font-medium w-8 text-center">F</p>
+                  <button class="btn">F1</button>
+                  <button class="btn">F2</button>
+                  <div class="w-8"></div>
+                  <button class="btn">F3</button>
+                  <button class="btn">F4</button>
+                </div>
+                <div class="flex items-center gap-2">
+                  <p class="font-medium w-8 text-center">G</p>
+                  <button class="btn">G1</button>
+                  <button class="btn">G2</button>
+                  <div class="w-8"></div>
+                  <button class="btn">G3</button>
+                  <button class="btn">G4</button>
+                </div>
+                <div class="flex items-center gap-2">
+                  <p class="font-medium w-8 text-center">H</p>
+                  <button class="btn">H1</button>
+                  <button class="btn">H2</button>
+                  <div class="w-8"></div>
+                  <button class="btn">H3</button>
+                  <button class="btn">H4</button>
+                </div>
+                <div class="flex items-center gap-2">
+                  <p class="font-medium w-8 text-center">I</p>
+                  <button class="btn">I1</button>
+                  <button class="btn">I2</button>
+                  <div class="w-8"></div>
+                  <button class="btn">I3</button>
+                  <button class="btn">I4</button>
+                </div>
+                <div class="flex items-center gap-2">
+                  <p class="font-medium w-8 text-center">J</p>
+                  <button class="btn">J1</button>
+                  <button class="btn">J2</button>
+                  <div class="w-8"></div>
+                  <button class="btn">J3</button>
+                  <button class="btn">J4</button>
+                </div>
+              </div>
+            </div>
+            <!-- Right Section (Seat Details and Form) -->
+            <div class="col-span-5 bg-white rounded-lg shadow-md p-6">
+              <h3 class="text-xl font-bold pb-6">Booking Details</h3>
+              <!-- Seat Details -->
+              <div class="pb-6 border-b border-gray-200">
+                <div class="flex justify-between pb-2">
+                  <p class="font-medium">Seat</p>
+                  <p class="font-medium">C2</p>
+                </div>
+                <div class="flex justify-between pb-2">
+                  <p class="font-medium">Class</p>
+                  <p class="font-medium">Economy</p>
+                </div>
+                <div class="flex justify-between">
+                  <p class="font-medium">Price</p>
+                  <p class="font-medium">BDT 550</p>
+                </div>
+              </div>
+              <!-- Price Details -->
+              <div class="py-6 border-b border-gray-200">
+                <div class="flex justify-between pb-2">
+                  <p>Total Price</p>
+                  <p class="font-bold">BDT 1100</p>
+                </div>
+                <div class="flex justify-between">
+                  <p>Grand Total</p>
+                  <p class="font-bold">BDT 1100</p>
+                </div>
+              </div>
+              <!-- Coupon -->
+              <div class="py-6">
+                <input
+                  type="text"
+                  placeholder="Have any coupon?"
+                  class="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+                />
+                <button class="btn w-full mt-2 bg-green-500 text-white py-2 rounded-lg font-medium">Apply</button>
+              </div>
+              <!-- Form -->
+              <div class="space-y-4">
+                <input
+                  type="text"
+                  placeholder="Passenger Name*"
+                  class="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+                />
+                <input
+                  type="text"
+                  placeholder="Phone Number*"
+                  class="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+                />
+                <input
+                  type="email"
+                  placeholder="Email ID"
+                  class="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+                />
+                <button class="btn w-full bg-green-500 text-white py-2 rounded-lg font-medium">Next</button>
+              </div>
+              <!-- Links -->
+              <div class="flex justify-between text-sm pt-4 text-gray-500">
+                <a href="#" class="hover:underline">Terms and Conditions</a>
+                <a href="#" class="hover:underline">Cancellation Policy</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+        
+       
+        
+        
         
       </section>
       
