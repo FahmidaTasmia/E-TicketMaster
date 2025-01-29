@@ -10,8 +10,8 @@
 </head>
 <body class="flex flex-col min-h-screen container mx-auto" data-theme="light">
     <main>
-      <!-- Navbar -->
-      <nav class="navbar bg-transparent sticky top-0 z-50">
+       <!-- Navbar -->
+       <nav class="navbar bg-gray-100 sticky top-0 z-50">
         <div class="navbar-start">
           <div class="dropdown">
             <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -31,24 +31,22 @@
             <ul
               tabindex="0"
               class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow text-lg">
-              <li><a>Home</a></li>
-              <li><a>About</a></li>
-              <li><a>Offer</a></li>
-              <li><a>Destination</a></li>
-              <li><a>Search</a></li>
-             
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#offers">Offers</a></li>
+              <li><a href="#destination">Destination</a></li>
+              <li><a href="#search">Search</a></li>
             </ul>
           </div>
           <a class="btn btn-ghost text-4xl font-bold">E-TicketMaster</a>
         </div>
         <div class="navbar-center hidden lg:flex">
           <ul class="menu menu-horizontal px-1 text-lg">
-            <li><a>Home</a></li>
-            <li><a>About</a></li>
-            <li><a>Offer</a></li>
-            <li><a>Destination</a></li>
-            <li><a>Search</a></li>
-           
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#offers">Offers</a></li>
+            <li><a href="#destination">Destination</a></li>
+            <li><a href="#search">Search</a></li>
           </ul>
         </div>
         <div class="navbar-end">
@@ -60,7 +58,7 @@
       </nav>
     
     <!-- banner -->
-     <section class="home relative bg-no-repeat bg-center h-screen bg-cover bg-[url(images/banner.png)] flex items-center justify-center text-center rounded-2xl " >
+     <section id="home" class="relative bg-no-repeat bg-center h-screen bg-cover bg-[url(images/banner.png)] flex items-center justify-center text-center rounded-2xl " >
         <div>
             <h2 class="text-8xl font-extrabold text-white tracking-wide"> End-To-End Travel With</h2>
             <h4 class="text-8xl font-bold text-[#1DD100] py-4"> NextBus Poribohoh</h4>
@@ -69,8 +67,8 @@
         </div>
      </section>
 
-     <!-- achievement  -->
-     <section class=" about absolute mx-auto container pb-5 -mt-20 w-full flex justify-center z-50">
+     <!-- about  -->
+     <section id="about" class=" absolute mx-auto container pb-5 -mt-20 w-full flex justify-center z-50">
         <div class=" flex justify-center space-x-4  ">
           <!-- Card 1 -->
           <div class="bg-white  shadow-md rounded-lg p-6 max-w-sm border-b-4 border-b-[#1DD100]">
@@ -106,7 +104,7 @@
       </section>
 
       <!-- Coupon -->
-      <section class="offers py-10 mt-20 " >
+      <section id="offers" class=" py-10 mt-20 " >
         <div>
             <h4 class="font-semibold  text-center text-4xl py-10">Best Offers For You</h4>
         </div>
@@ -160,7 +158,7 @@
       </section>
 
        <!-- select your seat -->
-       <section class="w-full border-t-4 border-[#1DD100] bg-[#F7F8F8] pb-20 rounded-t-[50px]">
+       <section id="destination" class="w-full border-t-4 border-[#1DD100] bg-[#F7F8F8] pb-20 rounded-t-[50px]">
         <!-- text section -->
         <div class="mx-auto text-center py-10">
           <h4 class="text-4xl font-bold pb-4">NextBus Paribahan</h4>
@@ -170,7 +168,7 @@
           </p>
         </div>
         <!-- ticket -->
-        <div class="destination bg-white px-12 mx-auto flex justify-between items-center rounded-lg shadow-md w-2/3">
+        <div class=" bg-white px-12 mx-auto flex justify-between items-center rounded-lg shadow-md w-2/3">
           <!-- left section -->
           <div class="flex flex-col space-y-4 w-3/4">
             <!-- Header -->
@@ -186,7 +184,7 @@
             <button
               class="flex items-center justify-center gap-2 bg-[#e9fbe6] text-[#1DD100] px-4 py-2 rounded-md font-medium w-fit">
               <img src="images/bus-icon.png" alt="Bus Icon" class="w-5 h-5">
-              <span>40 Seats Left</span>
+              <span class="seats-left">40 Seats Left</span>
             </button>
            </div>
             <!-- Ticket details -->
@@ -218,8 +216,8 @@
           </div>
         </div>
 
-        <!-- select your seat -->
-      <div class="search bg-white rounded-lg shadow-lg grid grid-cols-2 gap-3 w-3/4 justify-center mx-auto py-10 mt-10 ">
+        <!-- Dynamic seat booking section -->
+      <div id="search" class=" bg-white rounded-lg shadow-lg grid grid-cols-2 gap-3 w-3/4 justify-center mx-auto py-10 mt-10 ">
         <!-- left section -->
          <div class="">
           <!-- header part start  -->
@@ -244,99 +242,98 @@
          </div>
          <!-- header part end  -->
           <!-- seats raw start -->
-           <div class="w-full">
+          <div class="w-full">
             <!-- Row A -->
-            <div class="flex items-center gap-2 ">
+            <div class="flex items-center gap-2 mt-4 ">
               <p class="font-medium w-20 text-center">A</p>
-              <button class="btn w-20">A1</button>
-              <button class="btn w-20">A2</button>
+              <button class="btn seat w-20">A1</button>
+              <button class="btn seat w-20">A2</button>
               <div class="w-20"></div>
-              <button class="btn w-20">A3</button>
-              <button class="btn w-20">A4</button>
+              <button class="btn seat w-20">A3</button>
+              <button class="btn seat w-20">A4</button>
             </div>
             <!-- Row B -->
             <div class="flex items-center gap-2 mt-4 ">
               <p class="font-medium w-20 text-center">B</p>
-              <button class="btn w-20">B1</button>
-              <button class="btn w-20">B2</button>
+              <button class="btn seat w-20">B1</button>
+              <button class="btn seat w-20">B2</button>
               <div class="w-20"></div>
-              <button class="btn w-20">B3</button>
-              <button class="btn w-20">B4</button>
+              <button class="btn seat w-20">B3</button>
+              <button class="btn seat w-20">B4"></button>
             </div>
-            <!-- Row c -->
+            <!-- Row C -->
             <div class="flex items-center gap-2 mt-4 ">
               <p class="font-medium w-20 text-center">C</p>
-              <button class="btn w-20">C1</button>
-              <button class="btn w-20">C2</button>
+              <button class="btn seat w-20">C1</button>
+              <button class="btn seat w-20">C2</button>
               <div class="w-20"></div>
-              <button class="btn w-20">C3</button>
-              <button class="btn w-20">C4</button>
+              <button class="btn seat w-20">C3</button>
+              <button class="btn seat w-20">C4</button>
             </div>
-             <!-- Row D -->
-             <div class="flex items-center gap-2 mt-4 ">
+            <!-- Row D -->
+            <div class="flex items-center gap-2 mt-4 ">
               <p class="font-medium w-20 text-center">D</p>
-              <button class="btn w-20">D1</button>
-              <button class="btn w-20">D2</button>
+              <button class="btn seat w-20">D1</button>
+              <button class="btn seat w-20">D2</button>
               <div class="w-20"></div>
-              <button class="btn w-20">D3</button>
-              <button class="btn w-20">D4</button>
+              <button class="btn seat w-20">D3</button>
+              <button class="btn seat w-20">D4</button>
             </div>
             <!-- Row E -->
             <div class="flex items-center gap-2 mt-4 ">
               <p class="font-medium w-20 text-center">E</p>
-              <button class="btn w-20">E1</button>
-              <button class="btn w-20">E2</button>
+              <button class="btn seat w-20">E1</button>
+              <button class="btn seat w-20">E2</button>
               <div class="w-20"></div>
-              <button class="btn w-20">E3</button>
-              <button class="btn w-20">E4</button>
+              <button class="btn seat w-20">E3</button>
+              <button class="btn seat w-20">E4</button>
             </div>
             <!-- Row F -->
             <div class="flex items-center gap-2 mt-4 ">
               <p class="font-medium w-20 text-center">F</p>
-              <button class="btn w-20">F1</button>
-              <button class="btn w-20">F2</button>
+              <button class="btn seat w-20">F1</button>
+              <button class="btn seat w-20">F2</button>
               <div class="w-20"></div>
-              <button class="btn w-20">F3</button>
-              <button class="btn w-20">F4</button>
+              <button class="btn seat w-20">F3</button>
+              <button class="btn seat w-20">F4</button>
             </div>
-             <!-- Row G -->
-             <div class="flex items-center gap-2 mt-4 ">
+            <!-- Row G -->
+            <div class="flex items-center gap-2 mt-4 ">
               <p class="font-medium w-20 text-center">G</p>
-              <button class="btn w-20">G1</button>
-              <button class="btn w-20">G2</button>
+              <button class="btn seat w-20">G1</button>
+              <button class="btn seat w-20">G2</button>
               <div class="w-20"></div>
-              <button class="btn w-20">G3</button>
-              <button class="btn w-20">G4</button>
+              <button class="btn seat w-20">G3</button>
+              <button class="btn seat w-20">G4</button>
             </div>
-             <!-- Row H -->
-             <div class="flex items-center gap-2 mt-4 ">
+            <!-- Row H -->
+            <div class="flex items-center gap-2 mt-4 ">
               <p class="font-medium w-20 text-center">H</p>
-              <button class="btn w-20">H1</button>
-              <button class="btn w-20">H2</button>
+              <button class="btn seat w-20">H1</button>
+              <button class="btn seat w-20">H2</button>
               <div class="w-20"></div>
-              <button class="btn w-20">H3</button>
-              <button class="btn w-20">H4</button>
+              <button class="btn seat w-20">H3</button>
+              <button class="btn seat w-20">H4</button>
             </div>
-             <!-- Row I -->
-             <div class="flex items-center gap-2 mt-4 ">
+            <!-- Row I -->
+            <div class="flex items-center gap-2 mt-4 ">
               <p class="font-medium w-20 text-center">I</p>
-              <button class="btn w-20">I1</button>
-              <button class="btn w-20">I2</button>
+              <button class="btn seat w-20">I1</button>
+              <button class="btn seat w-20">I2</button>
               <div class="w-20"></div>
-              <button class="btn w-20">I3</button>
-              <button class="btn w-20">I4</button>
+              <button class="btn seat w-20">I3</button>
+              <button class="btn seat w-20">I4</button>
             </div>
-             <!-- Row F -->
-             <div class="flex items-center gap-2 mt-4 ">
+            <!-- Row J -->
+            <div class="flex items-center gap-2 mt-4 ">
               <p class="font-medium w-20 text-center">J</p>
-              <button class="btn w-20">J1</button>
-              <button class="btn w-20">J2</button>
+              <button class="btn seat w-20">J1</button>
+              <button class="btn seat w-20">J2</button>
               <div class="w-20"></div>
-              <button class="btn w-20">J3</button>
-              <button class="btn w-20">J4</button>
-            </div>
-            <!-- end -->
-           </div>
+              <button class="btn seat w-20">J3</button>
+              <button class="btn seat w-20">J4</button>
+            </div>  
+          </div>
            <!-- seats raw end -->
          </div>
          <!-- left section end -->
@@ -346,41 +343,33 @@
               <h3 class="py-5 border-b border-dashed font-bold text-xl border-gray-300">Select Your Seat</h3>
             </div>
             <!-- price details start -->
-             <div class="bg-gray-100 p-5 shadow-lg rounded-lg">
-                <!-- Seat Details -->
+            <div class="bg-gray-100 p-5 shadow-lg rounded-lg">
+              <!-- Seat Details -->
               <div class="flex justify-between pb-5 border-b border-gray-300 border-dashed font-bold">
-                <p>seat <span>2</span></p>
+                <p>seat <sup><span>0</span></sup></p>
                 <p>class</p>
                 <p>price</p>
               </div>
-              <div class="flex justify-between mt-3">
-                 <p>c2</p>
-                 <p>Economy</p>
-                 <p>550</p>
+              <!-- Dynamic Seat Details -->
+              <div class="seat-details">
+                <!-- Selected seats will be dynamically added here -->
               </div>
-              <div class="flex justify-between my-3">
-                <p>c2</p>
-                <p>Economy</p>
-                <p>550</p>
-             </div>
               <!-- Price Details -->
-             <div class="flex justify-between font-bold mt-3 border-t-4 border-gray-200">
-              <p>Total Price</p>
-              <p>BDT 1100</p>
-             </div>
+              <div class="flex justify-between font-bold mt-3 border-t-4 border-gray-200">
+                <p>Total Price</p>
+                <p>BDT <span class="total-price">0</span></p>
+              </div>
               <!-- Coupon -->
               <div class="mx-auto flex relative my-5">
                 <input type="text" placeholder="Have Any Coupon? " class="relative p-4 w-full bg-white mx-3 shadow-lg rounded-lg focus:outline-none focus:border-[#1DD100] border-2">
-                <button class="absolute right-10 top-0 bottom-0 bg-[#1DD100] text-white px-4 rounded-lg shadow-lg m-3">apply</button>
+                <button class="apply absolute right-10 top-0 bottom-0 bg-[#1DD100] text-white px-4 rounded-lg shadow-lg m-3">apply</button>
               </div>
-              
-              <!-- total -->
-               <div class="mx-auto p-5 flex justify-between font-bold">
+              <!-- Grand Total -->
+              <div class="mx-auto p-5 flex justify-between font-bold">
                 <p>Grand Total</p>
-                <p>BDT 1100</p>
-               </div>
-              <!--  -->
-             </div>
+                <p>BDT <span class="grand-total">0</span></p>
+              </div>
+            </div>
             <!-- price details end -->
              <!-- Form -->
              <div class="my-5">
@@ -402,7 +391,7 @@
                 placeholder="Enter Your Name"
                 class=" p-4 w-full bg-white my-3 shadow-md rounded-lg focus:outline-none focus:border-[#1DD100] border-2"
               />
-              <button class="btn w-full bg-[#1DD100] text-white py-2 text-lg rounded-lg font-medium">Next</button>
+              <button class="next btn w-full bg-[#1DD100] text-white py-2 text-lg rounded-lg font-medium">Next</button>
             </div>
             <!-- Links -->
             <div class="flex justify-between text-sm pt-4 text-gray-500">
@@ -443,7 +432,7 @@
       
     </main>
 
-    <script src="scripts/script.js"></script>
     <script src="scripts/utility.js"></script>
+    <script src="scripts/script.js"></script>
 </body>
 </html>
