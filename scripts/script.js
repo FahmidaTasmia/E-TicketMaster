@@ -5,6 +5,7 @@ const nextBtn = document.getElementById('next');
 const couponInput = document.getElementById('coupon-input');
 const phoneInput = document.getElementById('phone-number');
 const seatsLeftSpan = document.getElementById('seats-left');
+const seatCountSpan = document.getElementById('count');
 const totalPriceSpan = document.getElementById('total-price');
 const grandTotal = document.getElementById('grand-total');
 const seatDetails = document.getElementById('seat-details');
@@ -46,5 +47,23 @@ seats.forEach(seat=>{
        //update seats left display
 
             seatsLeftSpan.innerText = `${seatsLeft} seats left`
+            seatCountSpan.textContent = selectedSeats.length;
+
+            //update seat details
+            updateSeatDetails();
     })
 });
+
+function updateSeatDetails(){
+    seatDetails.innerHTML =''; //clear previous entries
+
+    selectedSeats.forEach(seat =>{
+        seatDetails.innerHTML += `
+         <div class="flex justify-between py-2">
+        <p>${seat}</p>
+        <p>Economy</p>
+        <p>550</p>
+      </div>
+        `;
+    });
+}
