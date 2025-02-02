@@ -184,7 +184,7 @@
             <button
               class="flex items-center justify-center gap-2 bg-[#e9fbe6] text-[#1DD100] px-4 py-2 rounded-md font-medium w-fit">
               <img src="images/bus-icon.png" alt="Bus Icon" class="w-5 h-5">
-              <span class="seats-left">40 Seats Left</span>
+              <span id="seats-left">40 Seats Left</span>
             </button>
            </div>
             <!-- Ticket details -->
@@ -351,48 +351,55 @@
                 <p>price</p>
               </div>
               <!-- Dynamic Seat Details -->
-              <div class="seat-details">
+              <div id="seat-details">
                 <!-- Selected seats will be dynamically added here -->
               </div>
               <!-- Price Details -->
               <div class="flex justify-between font-bold mt-3 border-t-4 border-gray-200">
                 <p>Total Price</p>
-                <p>BDT <span class="total-price">0</span></p>
+                <p>BDT <span id="total-price">0</span></p>
               </div>
               <!-- Coupon -->
               <div class="mx-auto flex relative my-5">
-                <input type="text" placeholder="Have Any Coupon? " class="relative p-4 w-full bg-white mx-3 shadow-lg rounded-lg focus:outline-none focus:border-[#1DD100] border-2">
-                <button class="apply absolute right-10 top-0 bottom-0 bg-[#1DD100] text-white px-4 rounded-lg shadow-lg m-3">apply</button>
+                <input  id="coupon-input" type="text" placeholder="Have Any Coupon? " class="relative p-4 w-full bg-white mx-3 shadow-lg rounded-lg focus:outline-none focus:border-[#1DD100] border-2">
+                <button id="apply" class=" absolute right-10 top-0 bottom-0 bg-[#1DD100] text-white px-4 rounded-lg shadow-lg m-3">apply</button>
               </div>
               <!-- Grand Total -->
               <div class="mx-auto p-5 flex justify-between font-bold">
                 <p>Grand Total</p>
-                <p>BDT <span class="grand-total">0</span></p>
+                <p>BDT <span id="grand-total">0</span></p>
               </div>
             </div>
             <!-- price details end -->
              <!-- Form -->
-             <div class="my-5">
-              <p class="text-lg font-bold" >Passenger Name*</p>
+             
+
+            <!-- Booking form section -->
+            <div class="booking-form my-5">
+              <p class="text-lg font-bold">Passenger Name*</p>
               <input
                 type="text"
+                id="passenger-name"
                 placeholder="Enter Your Name"
-                class=" p-4 w-full bg-white my-3 shadow-md rounded-lg focus:outline-none focus:border-[#1DD100] border-2"
+                class="p-4 w-full bg-white my-3 shadow-md rounded-lg focus:outline-none focus:border-[#1DD100] border-2"
               />
-              <p class="text-lg font-bold" >Phone Number*</p>
+              <p class="text-lg font-bold">Phone Number*</p>
               <input
                 type="text"
-                placeholder="Enter Your Name"
-                class=" p-4 w-full bg-white my-3 shadow-md rounded-lg focus:outline-none focus:border-[#1DD100] border-2"
+                id="phone-number"
+                placeholder="Enter Your Phone Number"
+                class="p-4 w-full bg-white my-3 shadow-md rounded-lg focus:outline-none focus:border-[#1DD100] border-2"
               />
-              <p class="text-lg font-bold" >Email ID</p>
+              <p class="text-lg font-bold">Email ID</p>
               <input
                 type="text"
-                placeholder="Enter Your Name"
-                class=" p-4 w-full bg-white my-3 shadow-md rounded-lg focus:outline-none focus:border-[#1DD100] border-2"
+                id="email-id"
+                placeholder="Enter Your Email"
+                class="p-4 w-full bg-white my-3 shadow-md rounded-lg focus:outline-none focus:border-[#1DD100] border-2"
               />
-              <button class="next btn w-full bg-[#1DD100] text-white py-2 text-lg rounded-lg font-medium">Next</button>
+              <button id="next" class=" btn w-full bg-[#1DD100] text-white py-2 text-lg rounded-lg font-medium">Next</button>
             </div>
+
             <!-- Links -->
             <div class="flex justify-between text-sm pt-4 text-gray-500">
               <a href="#" class="hover:underline">Terms and Conditions</a>
