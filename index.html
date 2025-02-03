@@ -399,8 +399,34 @@
                 placeholder="Enter Your Email"
                 class="p-4 w-full bg-white my-3 shadow-md rounded-lg focus:outline-none focus:border-[#1DD100] border-2"
               />
-              <button id="next" class=" btn w-full bg-[#1DD100] text-white py-2 text-lg rounded-lg font-medium">Next</button>
+              <div>
+                <button id="next" class="btn w-full bg-gray-400 text-white py-2 text-lg rounded-lg font-medium">Next</button>
+              
+                <!-- modal -->
+                <dialog id="booking_modal" class="modal ">
+                  <div class="modal-box">
+                    <div class="">
+                      <img class="w-16 flex justify-center mx-auto" src="images/success.png" alt="">
+                      <h3 class="font-semibold text-2xl text-[#1DD100] p-2 text-center">Success</h3>
+                    </div>
+                    <div class="py-4 ">
+                      <p class="text-center"><span class="font-bold text-[#1DD100]" id="modal-seat-count">0</span> Seat(s) Booked:</p>
+                      <p class="text-center" id="modal-seat-numbers" class="font-bold text-green-600"></p>
+                      <p class="text-center" class="pt-4 ">Total Price: ৳<span class="font-bold text-[#1DD100]" id="modal-total-price">0</span></p>
+                      <p class="text-center" class="text-sm  text-[#1DD100]">Confirmation will be sent to your phone number</p>
+                    </div>
+                    <div class="modal-action flex gap-4">
+                      <button id="close-modal" class="btn px-5 bg-[#e9fbe6] border-[#1DD100] text-[#1DD100] hover:bg-transparent hover:text-[#1DD100] hover:bg-white hover:border-[#1DD100]">Close</button>
+                      <button id="go-home-btn" class="btn  bg-[#1DD100] text-white py-2  rounded-lg ">Go Home</button>
+                    </div>
+                  </div>
+                </dialog>
+              </div>
+              
+            
             </div>
+
+            
 
             <!-- Links -->
             <div class="flex justify-between text-sm pt-4 text-gray-500">

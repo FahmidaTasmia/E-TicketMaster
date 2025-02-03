@@ -2,6 +2,12 @@
 const seats = document.querySelectorAll('.seat');
 const applyBtn = document.getElementById('apply');
 const nextBtn = document.getElementById('next');
+const bookingModal = document.getElementById('booking_modal');
+const modalSeatCount = document.getElementById('modal-seat-count');
+const modalSeatNumbers = document.getElementById('modal-seat-numbers');
+const modalTotalPrice = document.getElementById('modal-total-price');
+const goHomeBtn = document.getElementById('go-home-btn');
+const closeBtn = document.getElementById('close-modal');
 const couponInput = document.getElementById('coupon-input');
 const phoneInput = document.getElementById('phone-number');
 const seatsLeftSpan = document.getElementById('seats-left');
@@ -122,8 +128,49 @@ applyBtn.addEventListener('click', () => {
     }
 });
 
+//Enable Nex Button condition
 
+function nextButton(){
+    if(phoneInput.value.length >= 11){
+        enableButton(nextBtn)
+    }
+    else{
+        disableButton(nextBtn)
+    }
+}
+phoneInput.addEventListener("input", nextButton);
 
+//modal
 
-
-
+ nextBtn.addEventListener('click', () => {
+    if (typeof selectedSeats !== 'undefined' && grandTotalElement) {
+      modalSeatCount.textContent = selectedSeats.length;
+      modalSeatNumbers.textContent = selectedSeats.join(', ');
+      modalTotalPrice.textContent = grandTotalElement.textContent;
+    }
+  
+    // Show modal
+    bookingModal.showModal();
+    
+    // Reset form (if applicable)
+    selectedSeats = [];
+    seatsLeft = 40;
+    seatsLeftElement.innerText = '40 Seats Left';
+    seatDetails.innerHTML = '';
+    totalPriceElement.innerText = '0';
+    grandTotalElement.innerText = '0';
+    couponInput.value = '';
+    isCouponApplied = false;
+    seats.forEach(seat => seat.classList.remove('bg-[#1DD100]', 'text-white'));
+    seatCountSpan.textContent = '0';
+  });
+  
+  // Close modal
+  closeBtn.addEventListener('click', () => {
+    bookingModal.close();
+  });
+  
+  // Redirect to home
+  goHomeBtn.addEventListener('click', () => {
+    window.location.href = 'index.html'; 
+  });
