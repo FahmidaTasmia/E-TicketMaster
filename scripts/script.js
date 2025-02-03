@@ -7,7 +7,7 @@ const phoneInput = document.getElementById('phone-number');
 const seatsLeftSpan = document.getElementById('seats-left');
 const seatCountSpan = document.getElementById('count');
 const totalPriceSpan = document.getElementById('total-price');
-const grandTotal = document.getElementById('grand-total');
+const grandTotalElement = document.getElementById('grand-total');
 const seatDetails = document.getElementById('seat-details');
 
 //all variables we need to track
@@ -51,6 +51,7 @@ seats.forEach(seat=>{
 
             //update seat details
             updateSeatDetails();
+            calculatePrices()
     })
 });
 
@@ -67,3 +68,55 @@ function updateSeatDetails(){
         `;
     });
 }
+
+//calculate price and discounts
+
+function calculatePrices(){
+    //calculate base price
+    totalPrice = selectedSeats.length * basePrice ;
+    totalPriceSpan.innerText = totalPrice;
+    //apply automatic 20% discount for 4 seats
+    let discount  = 0;
+    if(selectedSeats.length ===4){
+        alert('congratulation ! you get automatically 20% discount')
+        discount = totalPrice * 0.2;
+       
+    }
+
+    //Apply coupon discount if valid
+    if(isCouponApplied){
+        const couponValue = couponInput.value;
+        if(couponValue ==='NEW15'){
+            discount += totalPrice * 0.15;
+        }
+        else if(couponValue === 'Couple20'){
+            discount += totalPrice * 0.2;
+        }
+    }
+
+    const grandTotal = totalPrice - discount;
+    grandTotalElement.innerText = grandTotal;
+}
+
+// Coupon code handling
+couponInput.addEventListener('input', () => {
+    // Enable apply button only when the coupon is entered
+    applyBtn.disabled = !couponInput.value.trim();  // Use 'value' to get the input value
+});
+
+applyBtn.addEventListener('click', () => {
+    const couponCode = couponInput.value.trim();  // Use 'value' to get the input value
+
+    if (validateCoupon(couponCode)) {
+        isCouponApplied = true;
+        calculatePrices();
+        couponInput.disabled = true;
+        applyBtn.disabled = true;
+        alert('Coupon Applied Successfully!');
+    } else {
+        alert('Invalid Coupon Code!');
+    }
+});
+
+
+
