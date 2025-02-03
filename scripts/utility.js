@@ -17,14 +17,16 @@ function validateCoupon(couponCode) {
     return validCoupons.includes(couponCode);
 }
 
-
-const disableButton = (button)=>{
+//Helper function to disable a button
+const disableButton = (button) => {
     button.disabled = true;
-    button.classList.add("opacity -50", "cursor-not-allowed");
+    button.classList.add("opacity-50", "cursor-not-allowed", "bg-gray-400");
+    button.classList.remove("bg-[#1DD100]", "opacity-100", "cursor-pointer");
 };
 
 //Helper Function to enable a button 
-const enableButton = (button)=>{
+const enableButton = (button) => {
     button.disabled = false;
-    button.classList.add("opacity -50", "cursor-not-allowed");
-}
+    button.classList.add("opacity-100", "cursor-pointer", "bg-[#1DD100]");
+    button.classList.remove("opacity-50", "cursor-not-allowed", "bg-gray-400");
+};

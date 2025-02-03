@@ -100,23 +100,30 @@ function calculatePrices(){
 
 // Coupon code handling
 couponInput.addEventListener('input', () => {
-    // Enable apply button only when the coupon is entered
-    applyBtn.disabled = !couponInput.value.trim();  // Use 'value' to get the input value
+    // Enable apply button only when the coupon input is not empty
+    if (couponInput.value.trim()) {
+        enableButton(applyBtn);
+    } else {
+        disableButton(applyBtn);
+    }
 });
 
 applyBtn.addEventListener('click', () => {
-    const couponCode = couponInput.value.trim();  // Use 'value' to get the input value
+    const couponCode = couponInput.value.trim();  // Get the input value
 
     if (validateCoupon(couponCode)) {
         isCouponApplied = true;
         calculatePrices();
-        couponInput.disabled = true;
-        applyBtn.disabled = true;
+        disableButton(couponInput);  // Disable input after applying
+        disableButton(applyBtn);  // Disable apply button after applying
         alert('Coupon Applied Successfully!');
     } else {
         alert('Invalid Coupon Code!');
     }
 });
+
+
+
 
 
 
